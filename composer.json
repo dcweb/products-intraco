@@ -1,0 +1,18 @@
+{
+    "name": "dcms/productsintraco",
+    "description": "Products module extension for Intraco",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "web",
+            "email": "web@groupdc.be"
+        }
+    ],
+    "require": {},
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Dcms\\Products\\": "/"
+        }
+    }
+}
