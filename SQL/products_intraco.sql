@@ -23,7 +23,7 @@ CREATE TABLE `pages_to_products_information_group` (
   `information_id` int(11) unsigned DEFAULT NULL,
   `information_group_id` int(11) unsigned DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT null,
-  `updated_at` timestamp NULL DEFAULT null,
+  `updated_at` timestamp NULL DEFAULT null
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 
 
 -- ----------------------------
