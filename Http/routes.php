@@ -11,21 +11,6 @@ Route::group(['middleware' => ['web']], function () {
     		//PRODUCTS
     		Route::group( array("prefix" => "products", "as"=>"products."), function() {
 
-    			//CATEGORIES
-    			Route::group( array("prefix" => "categories","as"=>"categories."), function() {
-    				Route::get("{id}/copy", array("as"=>"{id}.copy", "uses" => "CategoryController@copy"));
-    				Route::any("api/table", array("as"=>"api.table", "uses" => "CategoryController@getDatatable"));
-    			});
-    			Route::resource("categories","CategoryController");
-
-    			//INFORMATION
-    			Route::group( array("prefix" => "information","as"=>"information."), function() {
-    				Route::any("api/table", array("as"=>"api.table", "uses" => "InformationController@getDatatable"));
-    				Route::any("api/articlerelationtable/{article_id?}", array("as"=>"api.articlerelationtable", "uses" => "InformationController@getArticleRelationTable"));
-    				Route::any("api/plantrelationtable/{plant_id?}", array("as"=>"api.plantrelationtable", "uses" => "InformationController@getPlantRelationTable"));
-    			});
-    			Route::resource("information","InformationController");
-
     			//API
     			Route::group( array("prefix" => "api","as"=>"api."), function() {
     				Route::any("table", array("as"=>"table", "uses" => "ProductController@getDatatable"));
